@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airdrop Scout</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">Airdrop Scout <span class="tag">MVP</span></div>
+      <div class="subtitle">Yeni projeleri keşfet + basit risk uyarıları</div>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <label for="token">GitHub Token (opsiyonel)</label>
+        <input id="token" type="password" placeholder="ghp_..." />
+      </div>
+      <div class="row row2">
+        <label for="days">Son kaç gün?</label>
+        <input id="days" type="number" min="7" max="365" value="45" />
+        <label for="stars">Min star</label>
+        <input id="stars" type="number" min="0" max="5000" value="10" />
+      </div>
+      <div class="row">
+        <button id="save">Kaydet</button>
+        <button id="scan" class="primary">Scan</button>
+      </div>
+      <div class="row small">
+        <span id="status">Hazır.</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <button id="checkSite">Bu siteyi kontrol et (domain yaşı)</button>
+      </div>
+      <div class="row small" id="siteResult"></div>
+    </section>
+
+    <section class="card">
+      <div class="row between">
+        <div class="sectionTitle">Sonuçlar</div>
+        <div class="small" id="rateInfo"></div>
+      </div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <footer>
+      <div class="small">Bu bir MVP. Skorlar tahmini/heuristik.</div>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
